@@ -2,4 +2,4 @@
 
 使用react、react-router搭建的博客程序。利用github issues当作数据源。
 
-[blog](https://github.com/heeefei/blog/tree/gh-pages/index.html)
+[blog](https://heeefei.github.io/blog/)
