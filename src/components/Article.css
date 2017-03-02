@@ -1,0 +1,10 @@
+.article{
+  margin: 0 auto;
+  width: 7rem;
+  font-size: 0.15rem;
+}
+
+.article .article-title{
+  font-size: 0.225rem;
+  line-height: 1.5;
+}

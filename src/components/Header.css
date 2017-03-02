@@ -1,0 +1,32 @@
+.header{
+  min-height: 0.6rem;
+  padding: 0.1rem 0.3rem;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.header .links, .header .home {
+  display: inline-block;
+  margin-right: 0.2rem;
+  font-size: 0.15rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+}
+.header a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header .links a:hover {
+  border-bottom: 2px solid #42b983;
+
+}
+
+.header .home{
+  width: 0.5rem;
+  text-align: center;
+  position: relative;
+  top: 0.05rem;
+  font-weight: bold;
+  font-size: 0.3rem;
+  font-family: palatino, georgia, serif;
+}

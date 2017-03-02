@@ -1,0 +1,9 @@
+.post-title {
+  color: #42b983;
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.post-title:hover{
+  color: #267B54;
+}
