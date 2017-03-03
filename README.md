@@ -1,5 +1,5 @@
 # hefeifei‘s blog
 
-[hefei's blog](https://github.com/heeefei/blog/issues)
+[hefei's blog](https://github.com/hefei00/blog/issues)
 
-[github pages](https://heeefei.github.io/)
+[github pages](https://hefei00.github.io/)
