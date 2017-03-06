@@ -1,15 +1,11 @@
-import fetch from 'isomorphic-fetch'
+import axios from 'axios'
+import base64 from 'base64-url'
+const TOKEN = 'Nzg0ZmE0ZmU4ZDY2ZjU4ZDJjNzgyMGZhMGNiNDI5NGJkZTc0NTk2ZQ'
 
-const url = 'https://api.github.com/repos/heeefei/blog/issues'
-
-export function fetchIssues (filter) {
-  let urlWithFilter = filter ? url + filter : url
-  return fetch(urlWithFilter).then(response => response.json()).then(data => {
-    if (data.errors) {
-      return Promise.reject(data)
-    }
-    return data
-  }).catch((...args) => {
-    return Promise.reject(...args)
-  })
-}
+export const github = axios.create({
+  baseURL: 'https://api.github.com/repos/xufei/blog/',
+  timeout: 10000,
+  headers: {
+    'Authorization': `token ${base64.decode(TOKEN)}`
+  }
+})

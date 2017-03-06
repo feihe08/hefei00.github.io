@@ -1,32 +1,33 @@
 .header{
+  display: flex;
   min-height: 0.6rem;
-  padding: 0.1rem 0.3rem;
+  padding: 0 0.3rem;
   border-bottom: 1px solid #ddd;
   overflow: hidden;
   box-sizing: border-box;
 }
 .header .links, .header .home {
   display: inline-block;
-  margin-right: 0.2rem;
   font-size: 0.15rem;
-  height: 0.5rem;
-  line-height: 0.5rem;
+  margin: auto 0.2rem auto 0;
 }
 .header a {
   text-transform: uppercase;
   text-decoration: none;
 }
-.header .links a:hover {
+.header .links a:hover, .header .active {
   border-bottom: 2px solid #42b983;
-
+}
+.header .links a:active {
+  color: #2c3e50;
 }
 
 .header .home{
   width: 0.5rem;
   text-align: center;
-  position: relative;
-  top: 0.05rem;
   font-weight: bold;
   font-size: 0.3rem;
   font-family: palatino, georgia, serif;
+  position: relative;
+  top: 2px;
 }

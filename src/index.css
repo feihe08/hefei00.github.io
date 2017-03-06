@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;
-  color: #393939;
+  color: #34495e;
   background: #fff;
 }
 html {
@@ -15,5 +15,5 @@ body {
 
 .content {
   width: 7rem;
-  margin: 0.8rem auto;
+  margin: 0.5rem auto;
 }

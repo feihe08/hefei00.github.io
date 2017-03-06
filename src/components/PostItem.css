@@ -1,6 +1,7 @@
 .post-item{
   font-size: 0.15rem;
   line-height: 1.5;
+  margin-left: 0.5rem;
 }
 
 .post-item >*{

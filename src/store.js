@@ -1,27 +1,39 @@
-import {fetchIssues} from './api'
+import {github} from './api'
 
 const store = {}
 let issues = []
 
 export function initFetch () {
-  let fetchAll = fetchIssues().then(json => {
-    json.forEach(issue => {
-      store[issue.id] = issue
-    })
-    issues = json
+  return github('issues').then(response => {
+    cacheIssue(response.data)
   })
-  let fetchDefault = fetchIssues('?fliter=all&per_page=4').then(json => {
-    json.forEach(issue => {
-      store[issue.id] = issue
-    })
-    issues = json
+
+  // NOTE: 一次请求所有数据的话，速度太慢
+  // return github('/repos/xufei/blog/issues?fliter=all&per_page=4').then(response => {
+  //   cacheIssue(response.data)
+  // })
+}
+
+function cacheIssue(issueList) {
+  issueList.forEach(issue => {
+    store[issue.id] = issue
   })
-  return Promise.race([fetchAll, fetchDefault])
+  issues = issueList
 }
 
 export function archives () {
   // TODO:  按年份分类
-  let archive = issues
+  let year = undefined
+  let issueYear = undefined
+  let archive = []
+  issues.forEach(issue => {
+    issueYear = issue.created_at.slice(0,4)
+    if (year !== issueYear) {
+      year = issueYear
+      archive.push(year)
+    }
+    archive.push(issue)
+  })
   return archive
 }
 

@@ -12,7 +12,13 @@ export default function Archive (props) {
       <Header />
       <div className='content'>
         <div className='archive'>
-          {issues.map(issue => <PostItem issue={issue} key={issue.id} />)}
+          {issues.map(issue =>{
+            if(typeof issue === 'string'){
+              return <h2 className="archive-year" key={issue}>{issue}</h2>
+            }else {
+              return <PostItem issue={issue} key={issue.id} />
+            }
+          })}
         </div>
       </div>
       <Footer />
