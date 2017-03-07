@@ -61,8 +61,8 @@ module.exports = {
     // Generated JS file names (with nested folders).
     // There will be one main bundle, and one file per asynchronous chunk.
     // We don't currently advertise code splitting but Webpack supports it.
-    filename: 'build/static/js/[name].[chunkhash:8].js',
-    chunkFilename: 'build/static/js/[name].[chunkhash:8].chunk.js',
+    filename: 'static/js/[name].[chunkhash:8].js',
+    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
     // We inferred the "public path" (such as / or /my-project) from homepage.
     publicPath: publicPath
   },
@@ -115,7 +115,7 @@ module.exports = {
         loader: 'url',
         query: {
           limit: 10000,
-          name: 'build/static/media/[name].[hash:8].[ext]'
+          name: 'static/media/[name].[hash:8].[ext]'
         }
       },
       // Process JS with Babel.
