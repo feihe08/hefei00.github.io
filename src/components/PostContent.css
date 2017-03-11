@@ -1,6 +1,9 @@
 .post-content{
   font-size: 0.15rem;
 }
+.post-content h2, .post-content h3 {
+  font-size: 0.22rem;
+}
 .post-content pre{
   display: block;
   padding: 9.5px;

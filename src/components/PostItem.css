@@ -7,3 +7,7 @@
 .post-item >*{
   display: inline-block;
 }
+
+.post-item .post-title {
+  font-size: 0.15rem;
+}

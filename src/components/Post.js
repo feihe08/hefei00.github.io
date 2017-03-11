@@ -7,11 +7,12 @@ import './Post.css'
 
 export default function Post (props) {
   let post = props.post
+  post.body = post.body.replace(/^#[^#]+/, '')
   return (
     <div className='post'>
       <PostTitle id={post.id} title={post.title} />
       <PostTime time={post.created_at} />
-      <PostContent content={post.body.substr(0, 300)} />
+      <PostContent content={post.body.substr(0, 400)} />
       <Link to={`post/${post.id}`} className='post-read-more'>....more</Link>
     </div>
   )

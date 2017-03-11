@@ -6,12 +6,9 @@ let issues = []
 export function initFetch () {
   return github('issues').then(response => {
     cacheIssue(response.data)
+  }).catch(error => {
+    initFetch()
   })
-
-  // NOTE: 一次请求所有数据的话，速度太慢
-  // return github('/repos/xufei/blog/issues?fliter=all&per_page=4').then(response => {
-  //   cacheIssue(response.data)
-  // })
 }
 
 function cacheIssue(issueList) {
@@ -22,7 +19,6 @@ function cacheIssue(issueList) {
 }
 
 export function archives () {
-  // TODO:  按年份分类
   let year = undefined
   let issueYear = undefined
   let archive = []
