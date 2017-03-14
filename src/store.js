@@ -33,7 +33,7 @@ export function archives () {
     }
     archive.push(issue)
   })
-  return archive
+  return
 }
 
 export function post (id) {
@@ -41,6 +41,6 @@ export function post (id) {
 }
 
 export function blogs (page) {
-  page = Number(page)
+  page = Number(page) - 1
   return issues.slice(page, page + perPage)
 }
