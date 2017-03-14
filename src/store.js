@@ -1,7 +1,9 @@
 import {github} from './api'
 
 const store = {}
-let issues = []
+export let issues = []
+export let page = 0
+export let perPage = 4
 
 export function initFetch () {
   return github('issues').then(response => {
@@ -22,6 +24,7 @@ export function archives () {
   let year = undefined
   let issueYear = undefined
   let archive = []
+
   issues.forEach(issue => {
     issueYear = issue.created_at.slice(0,4)
     if (year !== issueYear) {
@@ -37,6 +40,7 @@ export function post (id) {
   return store[id]
 }
 
-export function blogs () {
-  return issues.slice(0, 4)
+export function blogs (page) {
+  page = Number(page)
+  return issues.slice(page, page + perPage)
 }
