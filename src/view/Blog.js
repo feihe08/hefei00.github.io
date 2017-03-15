@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Article from '../components/Article'
+import BlogNav from '../components/BlogNav'
 import {post} from '../store'
 
 export default function Blog (props) {
@@ -13,6 +14,7 @@ export default function Blog (props) {
       <div className='content'>
         <Article post={issue} />
       </div>
+      <BlogNav index={issue._index} />
       <Footer />
     </div>
   )

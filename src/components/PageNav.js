@@ -1,7 +1,7 @@
 import React from 'react'
 import {perPage, issues} from '../store'
-import {Link} from 'react-router'
 import './PageNav.css'
+import Button from '../components/Button'
 
 export default function PageNav (props) {
   let page = props.page
@@ -9,16 +9,9 @@ export default function PageNav (props) {
   let showNext = page * perPage >= issues.length ? 'btn-hide' : 'btn-show'
   return (
     <div className="page-nav">
-      <Link  to={`/${page-1}`}>
-        <button className={showPre}>
-          上一页
-        </button>
-      </Link>
-      <Link  to={`/${page+1}`}>
-        <button className={showNext}>
-          下一页
-        </button>
-      </Link>
+      <Button path={`/page/${page-1}`} text={'上一页'} classes={showPre}  />
+
+      <Button path={`/page/${page+1}`} text={'下一页'} classes={showNext} />
     </div>
   )
 }

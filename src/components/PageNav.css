@@ -1,22 +1,3 @@
 .page-nav {
   text-align: center;
 }
-
-.page-nav button {
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  margin: 0 4px;
-  padding: 4px 12px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #fff;
-}
-.page-nav .btn-show{
-  display: inline-block;
-}
-
-.page-nav .btn-hide{
-  display: none;
-}

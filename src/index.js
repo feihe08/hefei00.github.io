@@ -11,3 +11,4 @@ initFetch().then(() => {
   log('end')
   ReactDOM.render(<App />, document.querySelector('#root'))
 })
+

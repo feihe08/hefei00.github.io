@@ -14,7 +14,8 @@ export function initFetch () {
 }
 
 function cacheIssue(issueList) {
-  issueList.forEach(issue => {
+  issueList.forEach((issue, index) => {
+    issue._index = index
     store[issue.id] = issue
   })
   issues = issueList
@@ -33,10 +34,11 @@ export function archives () {
     }
     archive.push(issue)
   })
-  return
+  return archive
 }
 
 export function post (id) {
+  // return issues[index]
   return store[id]
 }
 

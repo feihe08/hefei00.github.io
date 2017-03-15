@@ -11,8 +11,8 @@ class App extends Component {
     return (
       <Router history={hashHistory}>
         <Route path='/'>
-          <IndexRedirect to={`/1`} component={Blogs} />
-          <Route path='/:page' component={Blogs} />
+          <IndexRedirect to={`/page/1`} component={Blogs} />
+          <Route path='/page/:page' component={Blogs} />
           <Route path='/about' component={About} />
           <Route path='/archive' component={Archive} />
           <Route path='/post/:id' component={Blog} />
