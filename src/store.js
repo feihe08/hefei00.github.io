@@ -43,6 +43,8 @@ export function post (id) {
 }
 
 export function blogs (page) {
-  page = Number(page) - 1
-  return issues.slice(page, page + perPage)
+  page = Number(page)
+  let start = (page - 1) * perPage
+  let end = page * perPage
+  return issues.slice(start, end)
 }

@@ -8,6 +8,9 @@ import {post} from '../store'
 export default function Blog (props) {
   let id = props.params.id
   let issue = post(id)
+  if (!issue){
+    props.router.replace('/404/')
+  }
   return (
     <div>
       <Header />

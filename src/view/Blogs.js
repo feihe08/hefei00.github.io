@@ -5,6 +5,7 @@ import Post from '../components/Post'
 import PageNav from '../components/PageNav'
 import {blogs} from '../store'
 
+
 export default function Blogs (props) {
   let page = props.params.page
   let issues = blogs(page)
