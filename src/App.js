@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Archive from './view/Archive'
+import Tags from './view/Tags'
 import About from './view/About'
 import Blogs from './view/Blogs'
 import Blog from './view/Blog'
@@ -15,6 +16,7 @@ class App extends Component {
           <Route path='/page/:page' component={Blogs} />
           <Route path='/about' component={About} />
           <Route path='/archive' component={Archive} />
+          <Route path='/tags' component={Tags} />
           <Route path='/post/:id' component={Blog} />
           <Route path='*' component={NotFound} />
         </Route>

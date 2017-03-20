@@ -4,8 +4,12 @@ const store = {}
 export let issues = []
 export let page = 0
 export let perPage = 4
+export let labels = []
 
 export function initFetch () {
+  github('labels').then(response => {
+    labels = response.data;
+  })
   return github('issues').then(response => {
     cacheIssue(response.data)
   }).catch(error => {
@@ -38,7 +42,6 @@ export function archives () {
 }
 
 export function post (id) {
-  // return issues[index]
   return store[id]
 }
 
@@ -47,4 +50,11 @@ export function blogs (page) {
   let start = (page - 1) * perPage
   let end = page * perPage
   return issues.slice(start, end)
+}
+
+export function tag(tag) {
+  return issues.filter(issue => {
+    let labels = issue.labels.map(label => label.name)
+    return labels.indexOf(tag) !== -1
+  })
 }
