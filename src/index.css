@@ -4,6 +4,7 @@ html, body {
   font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;
   color: #34495e;
   background: #fff;
+  height: 100%;
 }
 html {
   font-size: 100px;
@@ -12,7 +13,9 @@ body {
   font-size: 0.2rem;
   line-height: 1.5;
 }
-
+#root{
+  height: 100%;
+}
 .content {
   width: 7rem;
   margin: 0.5rem auto;

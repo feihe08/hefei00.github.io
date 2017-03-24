@@ -1,0 +1,8 @@
+.overlay{
+  height: 100%;
+  display: flex;
+}
+
+.overlay >div{
+  margin: auto;
+}
