@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {page} from '../actions/index'
 
 function mapStateToProps(state, ownProps) {
-  let page = state.page
+  let page = Number(ownProps.params.page)
   return {
     issues: state.issueList.slice((page -1) * 4, page * 4 ),
     totalNum: state.issueList.length

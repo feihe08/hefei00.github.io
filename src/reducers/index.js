@@ -5,9 +5,7 @@ const initState = {
   nav: 'blogs',//archive, blog
   loading: true,
   issues: {},
-  issueList: [],
-  perPage: 4,
-  page: 1
+  issueList: []
 }
 
 
@@ -30,8 +28,6 @@ const blogApp = (state = initState, action) => {
     case QUERY_FAIL:
       console.log('fail')
       break;
-    case PAGE:
-      return {...state, page: action.page}
     default:
       console.log('default')
       return state
