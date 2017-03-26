@@ -10,8 +10,6 @@
 
 ![归档](http://om7r90s26.bkt.clouddn.com/blog-archive.png)
 
-![文章](http://om7r90s26.bkt.clouddn.com/blog-post.png)
-
 
 ## todo
 - [ ] 移动端适配
