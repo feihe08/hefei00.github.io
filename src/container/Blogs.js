@@ -1,6 +1,5 @@
 import Blogs from '../page/Blogs'
 import {connect} from 'react-redux'
-import {page} from '../actions/index'
 
 function mapStateToProps(state, ownProps) {
   let page = Number(ownProps.params.page)
@@ -10,12 +9,4 @@ function mapStateToProps(state, ownProps) {
   }
 }
 
-function mapDispatchToProps(dispatch, ownProps) {
-  return {
-    pageNav: (p) => {
-      dispatch(page(p))
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Blogs)
+export default connect(mapStateToProps)(Blogs)

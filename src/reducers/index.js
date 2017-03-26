@@ -1,8 +1,8 @@
-import {QUERY_BEGIN, QUERY_END, QUERY_FAIL, PAGE} from '../actions/index'
+import {QUERY_BEGIN, QUERY_END, QUERY_FAIL} from '../actions/index'
+import {log} from '../log'
 
 //数据模型
 const initState = {
-  nav: 'blogs',//archive, blog
   loading: true,
   issues: {},
   issueList: []
@@ -11,13 +11,11 @@ const initState = {
 
 const blogApp = (state = initState, action) => {
   switch (action.type) {
-    case 'NAV':
-      return {...state, nav: action.nav}
     case QUERY_BEGIN:
-      console.log('begin')
+      log('begin')
       return {...state, loading: true}
     case QUERY_END:
-      console.log('end')
+      log('end')
       let issues = {}, issueList = []
       action.data.forEach((issue, index) => {
         issue._index = index
@@ -26,10 +24,10 @@ const blogApp = (state = initState, action) => {
       })
       return {...state, loading: false, issueList, issues}
     case QUERY_FAIL:
-      console.log('fail')
-      break;
+      log('fail')
+      return {...state, loading: true}
     default:
-      console.log('default')
+      log('default')
       return state
   }
 }

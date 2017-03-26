@@ -3,11 +3,10 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Article from '../components/Article'
 import BlogNav from '../components/BlogNav'
-import {post} from '../store'
 
 export default function Blog (props) {
-  let id = props.params.id
-  let issue = post(id)
+  let issue = props.issue
+  let issueList = props.issueList
   if (!issue){
     props.router.replace('/404/')
   }
@@ -17,7 +16,7 @@ export default function Blog (props) {
       <div className='content'>
         <Article post={issue} />
       </div>
-      <BlogNav index={issue._index} />
+      <BlogNav index={issue._index} issueList={issueList} />
       <Footer />
     </div>
   )

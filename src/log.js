@@ -1,4 +1,4 @@
 export function log(str) {
   let date = new Date()
-  console.log(date.toGMTString() + str)
+  console.log(`${str} at ${date.toLocaleString()}`)
 }
