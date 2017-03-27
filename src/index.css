@@ -5,6 +5,7 @@ html, body {
   color: #34495e;
   background: #fff;
   height: 100%;
+  width: 100%;
 }
 html {
   font-size: 100px;
@@ -17,6 +18,26 @@ body {
   height: 100%;
 }
 .content {
-  width: 7rem;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0.5rem auto;
+  padding: 0 0.1rem;
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+  .header {
+    padding: 0 0.15rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .content {
+    width: 7rem;
+  }
+  .header {
+    padding: 0 0.3rem;
+  }
 }

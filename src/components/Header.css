@@ -1,14 +1,13 @@
 .header{
   display: flex;
   min-height: 0.6rem;
-  padding: 0 0.3rem;
   border-bottom: 1px solid #ddd;
   overflow: hidden;
   box-sizing: border-box;
 }
 .header .links, .header .home {
   display: inline-block;
-  font-size: 0.15rem;
+  font-size: 0.2rem;
   margin: auto 0.2rem auto 0;
 }
 .header a {
