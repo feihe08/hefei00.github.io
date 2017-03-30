@@ -24,6 +24,7 @@ const blogApp = (state = initState, action) => {
       })
       return {...state, loading: false, issueList, issues}
     case QUERY_FAIL:
+      location.href = 'https://github.com/hefei00/blog/issues'
       log('fail')
       return {...state, loading: true}
     default:
