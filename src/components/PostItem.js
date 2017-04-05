@@ -3,7 +3,7 @@ import PostTime from './PostTime'
 import PostTitle from './PostTitle'
 import './PostItem.css'
 
-export default function PostItem (props) {
+export default function PostItem(props) {
   let issue = props.issue
   return (
     <div className='post-item'>

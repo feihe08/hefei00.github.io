@@ -4,10 +4,10 @@ import Footer from '../components/Footer'
 import Article from '../components/Article'
 import BlogNav from '../components/BlogNav'
 
-export default function Blog (props) {
+export default function Blog(props) {
   let issue = props.issue
   let issueList = props.issueList
-  if (!issue){
+  if (!issue) {
     props.router.replace('/404/')
   }
   return (

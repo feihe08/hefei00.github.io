@@ -1,5 +1,5 @@
-import {QUERY_BEGIN, QUERY_END, QUERY_FAIL} from '../actions/index'
-import {log} from '../log'
+import { QUERY_BEGIN, QUERY_END, QUERY_FAIL } from '../actions/index'
+import { log } from '../log'
 
 //数据模型
 const initState = {
@@ -13,7 +13,7 @@ const blogApp = (state = initState, action) => {
   switch (action.type) {
     case QUERY_BEGIN:
       log('begin')
-      return {...state, loading: true}
+      return { ...state, loading: true }
     case QUERY_END:
       log('end')
       let issues = {}, issueList = []
@@ -22,11 +22,11 @@ const blogApp = (state = initState, action) => {
         issues[issue.id] = issue
         issueList.push(issue)
       })
-      return {...state, loading: false, issueList, issues}
+      return { ...state, loading: false, issueList, issues }
     case QUERY_FAIL:
       location.href = 'https://github.com/hefei00/blog/issues'
       log('fail')
-      return {...state, loading: true}
+      return { ...state, loading: true }
     default:
       log('default')
       return state

@@ -1,5 +1,5 @@
 import Blog from '../page/Blog'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 function mapStateToProps(state, ownProps) {
   return {

@@ -3,7 +3,7 @@ import PostContent from './PostContent'
 import PostTime from './PostTime'
 import './Article.css'
 
-export default function Article (props) {
+export default function Article(props) {
   let post = props.post
   document.body.scrollTop = 0
   return (

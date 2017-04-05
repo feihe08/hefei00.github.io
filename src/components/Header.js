@@ -1,13 +1,13 @@
 import React from 'react'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 
 import './Header.css'
 
-export default function Header (props) {
+export default function Header(props) {
   return (
     <div className='header'>
       <div className='home'>
-        <Link  to='/'>h</Link>
+        <Link to='/'>h</Link>
       </div>
       <div className='links'>
         <Link to='/archive'>Archive</Link>

@@ -4,8 +4,8 @@ import Footer from '../components/Footer'
 import Post from '../components/Post'
 import PageNav from '../components/PageNav'
 
-export default function Blogs (props){
-  let {issues, totalNum} = props
+export default function Blogs(props) {
+  let { issues, totalNum } = props
   let page = Number(props.params.page)
   document.body.scrollTop = 0
   if (!issues.length) {

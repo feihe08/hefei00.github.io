@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import Archive from './container/Archive'
 import Blogs from './container/Blogs'
@@ -7,7 +7,7 @@ import NotFound from './page/NotFound'
 import Loading from './components/Loading'
 
 import { connect } from 'react-redux'
-import {queryIssues} from './actions/index'
+import { queryIssues } from './actions/index'
 
 import { Router, Route, IndexRedirect, hashHistory } from 'react-router'
 
@@ -16,11 +16,11 @@ class App extends Component {
     super(props)
     props.dispatch(queryIssues())
   }
-  render () {
+  render() {
     let loading = this.props.loading
     if (loading) {
       return <Loading />
-    }else {
+    } else {
       return (
         <Router history={hashHistory}>
           <Route path='/'>

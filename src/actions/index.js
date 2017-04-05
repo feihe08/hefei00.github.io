@@ -1,4 +1,4 @@
-import {github} from '../api'
+import { github } from '../api'
 
 export const QUERY_BEGIN = 'query_begin'
 export const QUERY_END = 'query_end'

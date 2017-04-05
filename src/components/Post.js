@@ -2,10 +2,10 @@ import React from 'react'
 import PostTitle from './PostTitle'
 import PostTime from './PostTime'
 import PostContent from './PostContent'
-import {Link} from 'react-router'
+import { Link } from 'react-router'
 import './Post.css'
 
-export default function Post (props) {
+export default function Post(props) {
   let post = props.post
   post.body = post.body.replace(/^#[^#]+/, '')
   return (
