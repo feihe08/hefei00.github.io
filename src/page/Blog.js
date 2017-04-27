@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Article from '../components/Article'
 import BlogNav from '../components/BlogNav'
+import Comment from '../components/Comment'
 
 export default function Blog(props) {
   let issue = props.issue
@@ -15,6 +16,7 @@ export default function Blog(props) {
       <Header />
       <div className='content'>
         <Article post={issue} />
+        <Comment issueNum={issue.number}></Comment>
       </div>
       <BlogNav index={issue._index} issueList={issueList} />
       <Footer />
