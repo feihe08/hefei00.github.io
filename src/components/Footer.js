@@ -4,7 +4,7 @@ import './Footer.css'
 export default function Footer() {
   return (
     <div className='footer'>
-      <span>Write By HeFei</span>
+      <span>Written By HeFei</span>
     </div>
   )
 }
