@@ -1,4 +1,5 @@
 # my blog, powered by react
+[![Build](https://travis-ci.org/hefei00/blog.svg?branch=master)](https://travis-ci.org/hefei00/blog)
 
 [在线地址](https://hefei00.github.io/blog/)
 
