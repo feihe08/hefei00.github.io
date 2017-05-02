@@ -13,5 +13,6 @@
 
 ## todo
 - [x] 移动端适配
+- [x] travis ci
 - [ ] 显示github的comment
 - [ ] 自动目录的实现
