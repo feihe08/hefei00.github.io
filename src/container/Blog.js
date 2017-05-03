@@ -1,10 +1,10 @@
 import Blog from '../page/Blog'
 import { connect } from 'react-redux'
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps({issues, issueList}, ownProps) {
   return {
-    issue: state.issues[ownProps.params.id],
-    issueList: state.issueList
+    issue: issues[ownProps.params.id],
+    issueList
   }
 }
 

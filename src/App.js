@@ -36,12 +36,5 @@ class App extends Component {
   }
 }
 
-
-function mapStateToProps(state) {
-  return {
-    loading: state.loading
-  }
-}
-
-
+let mapStateToProps = ({loading}) => ({loading})
 export default connect(mapStateToProps)(App)
