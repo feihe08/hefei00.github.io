@@ -6,6 +6,7 @@ import './Article.css'
 export default function Article(props) {
   let post = props.post
   document.body.scrollTop = 0
+  post.body = post.body.replace(/^#[^#]+/, '')
   return (
     <div className='article'>
       <h1 className='article-title'>{post.title}</h1>

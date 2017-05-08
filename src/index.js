@@ -16,10 +16,11 @@ let store = createStore(
   blogApp,
   applyMiddleware(thunk)
 )
-
+console.time('render')
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
   document.querySelector('#root')
 )
+console.timeEnd('render')

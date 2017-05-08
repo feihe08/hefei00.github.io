@@ -23,12 +23,12 @@ class App extends Component {
     } else {
       return (
         <Router history={hashHistory}>
-          <Route path='/'>
+          <Route path="/">
             <IndexRedirect to={`/page/1`} component={Blogs} />
-            <Route path='/page/:page' component={Blogs} />
-            <Route path='/archive' component={Archive} />
-            <Route path='/post/:id' component={Blog} />
-            <Route path='*' component={NotFound} />
+            <Route path="/page/:page" component={Blogs} />
+            <Route path="/archive" component={Archive} />
+            <Route path="/post/:id" component={Blog} />
+            <Route path="*" component={NotFound} />
           </Route>
         </Router>
       )
@@ -36,5 +36,5 @@ class App extends Component {
   }
 }
 
-let mapStateToProps = ({loading}) => ({loading})
+let mapStateToProps = ({ loading }) => ({ loading })
 export default connect(mapStateToProps)(App)

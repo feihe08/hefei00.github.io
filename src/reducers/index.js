@@ -1,5 +1,4 @@
 import { QUERY_BEGIN, QUERY_END, QUERY_FAIL } from '../actions/index'
-import { log } from '../log'
 
 //数据模型
 const initState = {
@@ -12,10 +11,10 @@ const initState = {
 const blogApp = (state = initState, action) => {
   switch (action.type) {
     case QUERY_BEGIN:
-      log('begin')
+      console.time('query')
       return { ...state, loading: true }
     case QUERY_END:
-      log('end')
+      console.timeEnd('query')
       let issues = {}, issueList = []
       action.data.forEach((issue, index) => {
         issue._index = index
@@ -25,10 +24,8 @@ const blogApp = (state = initState, action) => {
       return { ...state, loading: false, issueList, issues }
     case QUERY_FAIL:
       location.href = 'https://github.com/hefei00/blog/issues'
-      log('fail')
       return { ...state, loading: true }
     default:
-      log('default')
       return state
   }
 }

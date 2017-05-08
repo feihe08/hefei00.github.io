@@ -2,5 +2,15 @@ import React from 'react'
 import './PostTime.css'
 
 export default function PostTime(props) {
-  return <p className='post-time'>{props.time.substr(0, 10)}</p>
+  let date = new Date(props.time)
+  return <p className='post-time'>{format(date)}</p>
+}
+
+
+function format(date) {
+  let dateStr = date.toDateString()
+  let dateArr = dateStr.split(' ')
+  dateArr.shift()
+  let year = dateArr.pop()
+  return dateArr.join(' ') + ', ' + year
 }

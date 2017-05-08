@@ -15,6 +15,6 @@
 ## todo
 - [x] 移动端适配
 - [x] travis ci
-- [ ] markdown渲染方式优化
+- [x] markdown渲染方式优化
 - [ ] 显示github的comment
 - [ ] 自动目录的实现
