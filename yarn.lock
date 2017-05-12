@@ -2906,6 +2906,10 @@ he@1.1.x:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/he/download/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
+highlight.js@^9.11.0:
+  version "9.11.0"
+  resolved "http://registry.npm.taobao.org/highlight.js/download/highlight.js-9.11.0.tgz#47f98c7399918700db2caf230ded12cec41a84ae"
+
 history@^3.0.0:
   version "3.3.0"
   resolved "http://registry.npm.taobao.org/history/download/history-3.3.0.tgz#fcedcce8f12975371545d735461033579a6dae9c"
@@ -3771,6 +3775,12 @@ limiter@^1.0.5:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/limiter/download/limiter-1.1.0.tgz#6e2bd12ca3fcdaa11f224e2e53c896df3f08d913"
 
+linkify-it@^2.0.0:
+  version "2.0.3"
+  resolved "http://registry.npm.taobao.org/linkify-it/download/linkify-it-2.0.3.tgz#d94a4648f9b1c179d64fa97291268bdb6ce9434f"
+  dependencies:
+    uc.micro "^1.0.1"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/load-json-file/download/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -4036,6 +4046,16 @@ map-cache@^0.2.0:
   version "0.2.2"
   resolved "http://registry.npm.taobao.org/map-cache/download/map-cache-0.2.2.tgz#c32abd0bd6525d9b051645bb4f26ac5dc98a0dbf"
 
+markdown-it@^8.3.1:
+  version "8.3.1"
+  resolved "http://registry.npm.taobao.org/markdown-it/download/markdown-it-8.3.1.tgz#2f4b622948ccdc193d66f3ca2d43125ac4ac7323"
+  dependencies:
+    argparse "^1.0.7"
+    entities "~1.1.1"
+    linkify-it "^2.0.0"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.3"
+
 marked-terminal@^1.6.2:
   version "1.7.0"
   resolved "http://registry.npm.taobao.org/marked-terminal/download/marked-terminal-1.7.0.tgz#c8c460881c772c7604b64367007ee5f77f125904"
@@ -4054,7 +4074,7 @@ math-expression-evaluator@^1.2.14:
   version "1.2.16"
   resolved "http://registry.npm.taobao.org/math-expression-evaluator/download/math-expression-evaluator-1.2.16.tgz#b357fa1ca9faefb8e48d10c14ef2bcb2d9f0a7c9"
 
-"mdurl@~ 1.0.1":
+mdurl@^1.0.1, "mdurl@~ 1.0.1":
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/mdurl/download/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
@@ -6106,6 +6126,10 @@ typedarray@^0.0.6:
 ua-parser-js@0.7.12, ua-parser-js@^0.7.9:
   version "0.7.12"
   resolved "http://registry.npm.taobao.org/ua-parser-js/download/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
+
+uc.micro@^1.0.1, uc.micro@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/uc.micro/download/uc.micro-1.0.3.tgz#7ed50d5e0f9a9fb0a573379259f2a77458d50192"
 
 uglify-js@2.8.x, uglify-js@^2.6:
   version "2.8.14"
