@@ -23,13 +23,13 @@ class App extends Component {
     } else {
       return (
         <Router history={hashHistory}>
-          <Route path="/">
+          <div>
             <IndexRedirect to={`/page/1`} component={Blogs} />
             <Route path="/page/:page" component={Blogs} />
             <Route path="/archive" component={Archive} />
             <Route path="/post/:id" component={Blog} />
             <Route path="*" component={NotFound} />
-          </Route>
+          </div>
         </Router>
       )
     }
