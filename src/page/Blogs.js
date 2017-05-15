@@ -6,11 +6,8 @@ import PageNav from '../components/PageNav'
 
 export default function Blogs(props) {
   let { issues, totalNum } = props
-  let page = Number(props.params.page)
+  let page = Number(props.match.params.page)
   document.body.scrollTop = 0
-  if (!issues.length) {
-    props.router.replace("/404/");
-  }
   return (
     <div>
       <Header />
