@@ -3,13 +3,18 @@ import React, { Component } from 'react'
 import Archive from './container/Archive'
 import Blogs from './container/Blogs'
 import Blog from './container/Blog'
-import NotFound from './page/NotFound'
+// import NotFound from './page/NotFound'
 import Loading from './components/Loading'
 
 import { connect } from 'react-redux'
 import { queryIssues } from './actions/index'
 
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch
+} from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
@@ -23,13 +28,17 @@ class App extends Component {
     } else {
       return (
         <Router>
-          <div>
-            <Redirect to={`/page/1`} component={Blogs} />
-            <Route path="/page/:page" component={Blogs} />
-            <Route path="/archive" component={Archive} />
-            <Route path="/post/:id" component={Blog} />
-            <Route path="*" component={NotFound} />
-          </div>
+          <Switch>
+            <Route path="/">
+              <div>
+                <Redirect from="/" to="/page/1" />
+                <Route path="/page/:page" component={Blogs} />
+                <Route path="/archive" component={Archive} />
+                <Route path="/post/:id" component={Blog} />
+              </div>
+            </Route>
+            {/*<Route component={NotFound} />*/}
+          </Switch>
         </Router>
       )
     }

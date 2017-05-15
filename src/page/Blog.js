@@ -8,6 +8,9 @@ import Comment from '../components/Comment'
 export default function Blog(props) {
   let issue = props.issue
   let issueList = props.issueList
+  if (!issue) {
+    issue = issueList[0]
+  }
   return (
     <div>
       <Header />

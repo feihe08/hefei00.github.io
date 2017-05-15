@@ -7,7 +7,7 @@ export default function Header(props) {
   return (
     <div className='header'>
       <div className='home'>
-        <Link to='/'>h</Link>
+        <Link to='/page/1'>h</Link>
       </div>
       <div className='links'>
         <Link to='/archive'>Archive</Link>
