@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 function mapStateToProps({issues, issueList}, ownProps) {
   return {
-    issue: issues[ownProps.params.id],
+    issue: issues[ownProps.match.params.id],
     issueList
   }
 }

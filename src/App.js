@@ -9,7 +9,7 @@ import Loading from './components/Loading'
 import { connect } from 'react-redux'
 import { queryIssues } from './actions/index'
 
-import { Router, Route, IndexRedirect, hashHistory } from 'react-router'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
@@ -22,9 +22,9 @@ class App extends Component {
       return <Loading />
     } else {
       return (
-        <Router history={hashHistory}>
+        <Router>
           <div>
-            <IndexRedirect to={`/page/1`} component={Blogs} />
+            <Redirect to={`/page/1`} component={Blogs} />
             <Route path="/page/:page" component={Blogs} />
             <Route path="/archive" component={Archive} />
             <Route path="/post/:id" component={Blog} />

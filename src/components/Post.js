@@ -2,7 +2,7 @@ import React from 'react'
 import PostTitle from './PostTitle'
 import PostTime from './PostTime'
 import PostContent from './PostContent'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 import './Post.css'
 
 export default function Post(props) {

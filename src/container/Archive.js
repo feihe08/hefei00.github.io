@@ -18,7 +18,7 @@ function archives (issues) {
   return archive
 }
 
-function mapStateToProps({issueList}, ownProps) {
+function mapStateToProps({issueList}) {
   return {
     issueList: archives(issueList)
   }
