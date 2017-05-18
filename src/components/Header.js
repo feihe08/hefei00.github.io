@@ -16,7 +16,7 @@ export default function Header(props) {
         <Link to='/tags'>Tags</Link>
       </div>*/}
       <div className='links'>
-        <a href='https://github.com/hefei00' target='_blank'>Github</a>
+        <a href='https://github.com/hefei00' target='_blank' rel="noopener noreferrer">Github</a>
       </div>
     </div>
   )
