@@ -5,6 +5,7 @@ import Blogs from './container/Blogs'
 import Blog from './container/Blog'
 // import NotFound from './page/NotFound'
 import Loading from './components/Loading'
+import Snippet from './page/Snippet'
 
 import { connect } from 'react-redux'
 import { queryIssues } from './actions/index'
@@ -35,6 +36,7 @@ class App extends Component {
                 <Route path="/page/:page" component={Blogs} />
                 <Route path="/archive" component={Archive} />
                 <Route path="/post/:id" component={Blog} />
+                <Route path="/snippets" component={Snippet} />
               </div>
             </Route>
             {/*<Route component={NotFound} />*/}
