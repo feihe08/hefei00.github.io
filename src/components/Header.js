@@ -12,9 +12,9 @@ export default function Header(props) {
       <div className='links'>
         <Link to='/archive'>Archive</Link>
       </div>
-      <div className='links'>
+      {/*<div className='links'>
         <Link to='/snippets'>Snippets</Link>
-      </div>
+      </div>*/}
       <div className='links'>
         <a href='https://github.com/hefei00' target='_blank' rel="noopener noreferrer">Github</a>
       </div>
