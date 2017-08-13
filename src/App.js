@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import Archive from './container/Archive'
 import Blogs from './container/Blogs'
 import Blog from './container/Blog'
-// import NotFound from './page/NotFound'
 import Loading from './components/Loading'
 import Snippet from './page/Snippet'
 
@@ -39,7 +38,6 @@ class App extends Component {
                 <Route path="/snippets" component={Snippet} />
               </div>
             </Route>
-            {/*<Route component={NotFound} />*/}
           </Switch>
         </Router>
       )
