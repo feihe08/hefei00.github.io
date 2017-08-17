@@ -1,6 +1,7 @@
 .overlay{
   height: 100%;
   display: flex;
+  background: #fafafa;
 }
 
 .overlay >div{

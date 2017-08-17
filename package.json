@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "http://hefei00.github.io/blog",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "next",
+    "react-dom": "next"
   },
   "devDependencies": {
     "axios": "^0.15.3",
