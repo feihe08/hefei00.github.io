@@ -1,9 +1,8 @@
 # my blog, powered by react
-[![Build](https://travis-ci.org/hefei00/blog.svg?branch=master)](https://travis-ci.org/hefei00/blog)
 
-[在线地址](https://hefei00.github.io/blog/)
+[在线地址](https://hefei00.github.io)
 
-[交流](https://github.com/hefei00/blog/issues)
+[交流](https://github.com/hefei00/issues)
 
 个人博客，使用github issue作为数据源，使用`redux`管理数据，使用`react-router`做路由处理，使用`react-markdown`做markdown渲染。
 
