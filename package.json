@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hefei00.github.io/blog",
+  "homepage": "http://hefei00.github.io",
   "dependencies": {
     "react": "next",
     "react-dom": "next"
