@@ -20,11 +20,14 @@
     "react-router-dom": "^4.1.1",
     "react-scripts": "^1.0.11",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-replace": "^0.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "gulp move",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "browser-sync": "browser-sync start -p 'http://localhost:3000' -f './src/*' ",
