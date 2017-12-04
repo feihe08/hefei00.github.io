@@ -11,7 +11,9 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 class App extends Component {
   constructor(props) {
     super(props)
-    props.dispatch(queryIssues())
+  }
+  componentWillMount() {
+    this.props.dispatch(queryIssues())
   }
   render() {
     let loading = this.props.loading
