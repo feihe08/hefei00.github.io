@@ -8,7 +8,7 @@
     "react-dom": "next"
   },
   "devDependencies": {
-    "axios": "^0.15.3",
+    "axios": "^0.21.1",
     "base64-url": "^1.3.3",
     "browser-sync": "^2.18.8",
     "gh-pages": "^1.0.0",
